@@ -1,6 +1,5 @@
 from pathlib import Path
 from enum import Enum
-from copy import deepcopy
 
 
 class Field(Enum):

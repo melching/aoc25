@@ -41,7 +41,7 @@ def parse_input(input: str | Path) -> list[tuple[list[int], Operation]]:
 
     cols: dict[int, list[int]] = defaultdict(list)
 
-    lines = [l for l in input.splitlines() if l]
+    lines = [line for line in input.splitlines() if line]
 
     # make ops first
     ops = [Operation.from_str(o) for o in lines[-1].split(" ") if o]
@@ -66,7 +66,7 @@ def second(input: str | Path) -> int:
     if isinstance(input, Path):
         input = input.read_text()
 
-    lines = [l for l in input.splitlines() if l]
+    lines = [line for line in input.splitlines() if line]
 
     # the last line gives me an easy way to get the col widths
     col_widths: list[int] = []
